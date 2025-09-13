@@ -1,0 +1,23 @@
+services:
+  _defaults:
+    autowire: true
+    autoconfigure: true
+  Crayon\PicAuthBundle\:
+    resource: "../src/"
+    exclude:
+      - "../src/Badge/"
+      - "../src/Maker/"
+
+  Crayon\PicAuthBundle\Maker\:
+    resource: "../src/Maker"
+    tags:
+      - maker.command
+
+  maker.maker.make_pic_form_login:
+    class: Crayon\PicAuthBundle\Maker\MakePicFormLogin
+    arguments:
+      - "@maker.file_manager"
+      - "@maker.security_config_updater"
+    tags:
+      - maker.command
+  Crayon\PicAuthBundle\Maker\MakePicFormLogin: "@maker.maker.make_pic_form_login"

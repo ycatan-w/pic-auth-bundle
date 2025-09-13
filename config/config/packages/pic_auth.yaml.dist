@@ -1,0 +1,19 @@
+# config/packages/pic_auth.yaml.dist
+crayon_pic_auth:
+  pic_auth:
+    token_length: 32
+    hasher: sha256
+    stegano: lsb
+    pepper: ~
+  authenticator:
+    username_parameter: _username
+    image_parameter: _image
+    enable_csrf: true
+    csrf_parameter: _csrf_token
+    csrf_token_id: authenticate
+    always_use_default_target_path: false
+    target_path_parameter: _target_path
+    default_target_path: /
+    use_referer: false
+    check_path: /login
+    login_path: /login

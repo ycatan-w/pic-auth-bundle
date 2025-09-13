@@ -1,0 +1,41 @@
+# ---- Symfony / PHP ----
+/build/
+/var/
+/vendor/
+/node_modules/
+/public/bundles/
+/public/build/
+/.env.local
+/.env.local.php
+/.env.*.local
+
+# ---- Logs & Cache ----
+*.log
+/var/log/*
+/var/cache/*
+/var/test/*
+/var/dev/*
+/var/prod/*
+
+# ---- PHPUnit ----
+.phpunit.result.cache
+.phpunit.cache
+
+# ---- php-cs-fixer ----
+.php-cs-fixer.cache
+!.php-cs-fixer.dist.php
+
+# ---- Composer ----
+composer.lock
+composer.phar
+
+# ---- IDE ----
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# ---- OS ----
+.DS_Store
+Thumbs.db
